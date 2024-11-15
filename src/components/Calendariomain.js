@@ -9,7 +9,7 @@ function Calendariomain() {
   const [coordinacion, setCoordinacion] = useState("");
   const [especialidad, setEspecialidad] = useState("");
   const [loading, setLoading] = useState(true);
-  const API_BASE_URL = "http://localhost:7777/api";
+  const API_BASE_URL = "serverbienestar-production.up.railway.app/api";
   const [calendarVisible, setCalendarVisible] = useState(false);
   const [events, setEvents] = useState([]);
   const [daysInMonth, setDaysInMonth] = useState([]);
