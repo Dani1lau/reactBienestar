@@ -1,4 +1,4 @@
-const API_BASE_URL = "serverbienestar-production.up.railway.app/api";
+const API_BASE_URL = "https://serverbienestar-production.up.railway.app/api";
 
 //instructor
 export const obtenerInstructores = async () => {
