@@ -1360,7 +1360,39 @@ html
   /* Color de fondo más claro para días con eventos */
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
+
+  .form-container-calendariousua {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 450px;
+    padding: 20px;
+    /* Ajusta el padding según el diseño */
+    border: 2px solid #5cb85c;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    /* Asegura que padding no afecte el tamaño total */
+    margin-top: 28vh;
+    /* Ajusta el margen superior según sea necesario */
+    margin-left: 65%;
+    transform: translateX(-160%);
+    /* Ajusta el margen izquierdo según sea necesario */
+  }
+
+  .ficha-dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: white;
+    width: calc(96.3% - 2rem);
+    justify-content: center;
+  }
 
   /* Estilos para el contenedor del calendario */
   .calendar-container {
@@ -1379,7 +1411,7 @@ html
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     /* Asegura que padding no afecte el tamaño total */
-    margin-top: -22%;
+    margin-top: -24%;
     /* Ajusta el margen superior según sea necesario */
     margin-left: 50%;
     /* Centra el contenedor horizontalmente */
@@ -1972,8 +2004,8 @@ html
 }
 
 .input-form-programacion {
-  width: 98%;
-  height: 35px;
+  width: 100%%;
+  height: 40px;
   border: 1px solid #5cb85c;
   border-radius: 5px;
   padding-left: 13px;
@@ -2294,7 +2326,7 @@ button[type="submit"]:hover {
   color: #fff;
   background-color: #5CB85C;
   border-radius: 8px;
-  width: 201px;
+  width: auto;
   text-align: center;
 }
 
@@ -2396,6 +2428,77 @@ button[type="submit"]:hover {
 
 /* Media queries para pantallas más grandes */
 @media (min-width: 1600px) {
+
+  .espaciado {
+    height: 25px;
+    width: 9.8%; /* Hace que los inputs ocupen la mitad del ancho de la fila */
+    border: 1px solid #4cae4c;
+    border-radius: 5px;
+    background-color: #fafafa;
+    padding-left: 5px;
+  }
+
+  .image-preview {
+    margin-top: 10px;
+    width: 100%;
+    height: 80%; /* Altura ajustable */
+    max-height: 700px;
+    padding:550px 0 0 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow-y: scroll; /* Solo scroll vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+  }
+  
+
+  .info-display {
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid #5cb85c;
+    background-color: #f9f9f9;
+    margin: 2% 5% 1% 1%;
+    width: 60%;
+    height: 74vh;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+
+  .options-list {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: white;
+    width: 15.3%;
+    z-index: 1000;
+  }
+
+  .input-form-programacion {
+    width: 100%%;
+    height: 40px;
+    border: 1px solid #5cb85c;
+    border-radius: 5px;
+    padding-left: 13px;
+    box-sizing: border-box;
+  }
+
+  .dropdown-content button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #5cb85c;
+    color: #fff;
+    cursor: pointer;
+    width: 28vh;
+  }
+
 
   .modal-content {
     margin-top: 19% !important;
