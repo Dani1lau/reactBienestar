@@ -820,10 +820,11 @@ html {
   /* Elimina el margen predeterminado */
 }
 
-html,
-body {
-  height: auto !important;
-  width: auto !important;
+body,
+html
+{
+  height: 100% !important;
+  width: 100% !important;
   background-color: #5cb85c15 !important;
 }
 
