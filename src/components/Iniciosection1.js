@@ -15,7 +15,7 @@ function Iniciosection1() {
             <img className="imagen-index" src={asesoria_psicologica} alt="asesoria_psicologica" />
             <br/>
             <p className="txt-p">
-              El servicio de asesoría psicológica del SENA ofrece apoyo
+              HOLA---- El servicio de asesoría psicológica del SENA ofrece apoyo
               emocional y mental a los estudiantes. Proporciona un espacio
               confidencial para tratar problemas como el estrés académico, la
               ansiedad y la depresión. Los estudiantes pueden acceder a sesiones
