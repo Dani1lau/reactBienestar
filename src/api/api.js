@@ -450,40 +450,38 @@ export const updateUsuario = async (id_Usuario, usuario) => {
 
 export const login = async (correo_Usua, clave_Usua) => {
   try {
+    console.log('Datos enviados al backend:', { correo_Usua, clave_Usua }); // Revisa que estos datos sean correctos
+
     const response = await fetch(`${API_BASE_URL}/login`, {
-      method: "POST", // Usar el método POST
+      method: "POST",
       headers: {
-        "Content-Type": "application/json", // Definir el tipo de contenido
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        correo_Usua, // Enviar los datos como JSON
+        correo_Usua,
         clave_Usua,
       }),
     });
 
     if (!response.ok) {
-      throw new Error("Error de autenticación"); // Manejar el error si el login falla
+      throw new Error("Error de autenticación");
     }
 
-    const data = await response.json(); // Obtener la respuesta en formato JSON
+    const data = await response.json();
 
-    // Verificar si hay un usuario y token en la respuesta
     if (data && data.user && data.token) {
-      // Guarda el token en localStorage
       localStorage.setItem("token", data.token);
-
-      // Guarda el id_Usuario en localStorage
       localStorage.setItem("id_Usuario", data.user.id);
-
-      // Puedes también almacenar más información del usuario si lo necesitas
-      localStorage.setItem("nombre_Usuario", data.user.nombre); // Ejemplo: guardar el nombre
+      localStorage.setItem("nombre_Usuario", data.user.nombre);
     }
 
     return data;
   } catch (error) {
+    console.error("Error:", error.message);
     throw new Error(error.message || "Error de conexión");
   }
 };
+
 
 export const getProgramacionesPorFicha = async (ficha) => {
   try {

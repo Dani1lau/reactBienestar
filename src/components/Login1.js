@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { login } from "../api/api"; // Importa la función de login que realiza la solicitud al backend
-import logo from "../../src/static/img/Logo de Bienestar.png";
 import logonormal from "../../src/static/img/logo.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -9,6 +8,7 @@ function Login1() {
   const [contraseña, setContraseña] = useState("");
   const [error, setError] = useState("");
   const [mostrarContraseña, setMostrarContraseña] = useState(false); // Estado para mostrar/ocultar contraseña
+  const [user, setUser] = useState(null);
 
   // Expresión regular para validar un correo institucional específico
   const validarCorreo = (correo) => {
@@ -45,7 +45,7 @@ function Login1() {
 
     const handleSubmit = async (event) => {
       event.preventDefault(); // Evita la recarga de la página
-      
+  
       // Llama a la función de validación del formulario
       if (!validarFormulario()) {
           return; // Si la validación falla, detiene la ejecución
@@ -60,10 +60,10 @@ function Login1() {
   
           // Dependiendo del rol, redireccionar a diferentes páginas
           const rol = data.user.rol; // Acceder al rol dentro de "user"
-          
-          // Llama a la función login del contexto
-          const userData = { name: data.user.name, rol: rol }; // Asegúrate de que data.user tiene el campo name
-          login(userData);
+  
+          // Cambia el nombre de la función de login del contexto
+          const userData = { name: data.user.name, rol: rol }; 
+          setUser(userData); // Cambia a `setUser`
   
           if (rol === 1) {
               window.location.href = "/perfilAdmin";
@@ -79,7 +79,7 @@ function Login1() {
           setError("Correo o contraseña incorrectos. Inténtalo de nuevo.");
       }
   };
-
+  
   return (
     <div className="body-login">
       <div className="container-login">
