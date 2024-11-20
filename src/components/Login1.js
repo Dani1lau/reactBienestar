@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { login } from "../api/api"; // Importa la función de login que realiza la solicitud al backend
+import logo from "../../src/static/img/Logo de Bienestar.png";
 import logonormal from "../../src/static/img/logo.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -8,7 +9,7 @@ function Login1() {
   const [contraseña, setContraseña] = useState("");
   const [error, setError] = useState("");
   const [mostrarContraseña, setMostrarContraseña] = useState(false); // Estado para mostrar/ocultar contraseña
-  const [user, setUser] = useState(null);
+   const [user, setUser] = useState(null);
 
   // Expresión regular para validar un correo institucional específico
   const validarCorreo = (correo) => {
