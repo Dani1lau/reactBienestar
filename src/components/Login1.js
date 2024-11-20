@@ -83,11 +83,6 @@ function Login1() {
   return (
     <div className="body-login">
       <div className="container-login">
-        <header className="header-login">
-          <div className="logo">
-            <img src={logo} className="logobienestar" alt="Logo" />
-          </div>
-        </header>
         <div className="form-container-login">
           <form className="login-formulario" onSubmit={handleSubmit}>
             <img src={logonormal} className="logo2" alt="Logo" />
