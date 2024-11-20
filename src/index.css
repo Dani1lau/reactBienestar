@@ -2994,6 +2994,7 @@ body {
   position: relative;
   min-height: 100vh;
   background: url("../src/static/img/SENA.jpg") center center / cover no-repeat;
+  filter: brightness();
 }
 
 .body-login::before {
@@ -3038,7 +3039,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25%;
+  width: 20%;
   background-color: rgb(255, 255, 255);
   padding: 25px;
   margin: auto;
@@ -3094,7 +3095,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #5cb85c;
-  width: 110px;
+  width: 170px;
   color: white;
   border: none;
   padding: 10px;
