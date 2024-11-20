@@ -3019,7 +3019,7 @@ body {
   border-bottom: 2px solid #5cb85c;
   height: 11vh;
   width: 100%;
-  padding: 0%;
+  padding: 0;
 }
 
 .logo .logobienestar {
@@ -3033,17 +3033,22 @@ body {
   border-radius: 100px;
 }
 
+/* Estilos para el contenedor del formulario */
 .form-container-login {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: 25%;
   background-color: rgb(255, 255, 255);
   padding: 25px;
   margin: auto;
   border-radius: 20px;
   border: 4px solid #5cb85c;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .form-container-login .login-formulario {
@@ -3060,6 +3065,7 @@ body {
   padding: 5px;
 }
 
+/* Estilos de las etiquetas de los inputs */
 .formLogin-label {
   display: block;
   font-size: 1rem;
@@ -3068,20 +3074,21 @@ body {
   margin-bottom: 0.5rem;
 }
 
+/* Estilos de los inputs */
 .form-control-login {
-  width: 96%;
-  padding: 0.4rem 0.4rem;
-  margin: 0px;
+  width: 100%;
+  padding: 0.6rem 0.4rem;
+  margin: 0.5rem 0;
   font-size: 1rem;
   color: #495057;
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  z-index: 2;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+/* Estilos del botón de inicio de sesión */
 .botonLogin-inicio {
   display: flex;
   justify-content: center;
@@ -3090,11 +3097,16 @@ body {
   width: 110px;
   color: white;
   border: none;
-  padding: 6px;
+  padding: 10px;
   border-radius: 8px;
   font-size: 16px;
   margin: 20px auto 0 auto;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botonLogin-inicio:hover {
+  background-color: #4cae4c;
 }
 
 .botonLogin-inicio .enlace-inicio-login {
@@ -3113,15 +3125,16 @@ body {
   align-items: center;
 }
 
+/* Estilos de los inputs de contraseña con espacio para el ícono */
 .form-control-login {
-  padding-right: 2.5rem;
-  /* Espacio para el ícono */
+  padding-right: 2.5rem; /* Espacio para el ícono */
 }
 
 .password-toggle-icon {
   position: absolute;
   right: 15px;
-  top: 7px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
   color: #6c757d;
   font-size: 1.2rem;
